@@ -1,0 +1,50 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"BackendCodeEditorMiscSettings\">\n    <option name=\"/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue\" value=\"true\" type=\"bool\" />\n  </component>\n  <component name=\"CMakeProjectFlavorService\">\n    <option name=\"flavorId\" value=\"CMakePlainProjectFlavor\" />\n  </component>\n  <component name=\"CMakeSettings\">\n    <configurations>\n      <configuration PROFILE_NAME=\"Debug\" ENABLED=\"true\" CONFIG_NAME=\"Debug\" />\n    </configurations>\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"2dff6969-e8cb-4c56-9b0a-822e90d745fc\" name=\"Changes\" comment=\"feat(dsa): implement N-ary tree for quarterly report generation\">\n      <change beforePath=\"$PROJECT_DIR$/backend/handlers/auth_handler.c\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/backend/handlers/auth_handler.c\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/backend/handlers/auth_handler.h\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/backend/handlers/auth_handler.h\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/backend/main.c\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/backend/main.c\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ClangdSettings\">\n    <option name=\"formatViaClangd\" value=\"false\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;v6mp1r3&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/v6mp1r3/swifttender.git&quot;,\n    &quot;accountId&quot;: &quot;3b1f847e-a173-4168-8bf8-604048206225&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 0\n}</component>\n  <component name=\"ProjectId\" id=\"3Dd8VQmGZzOffOWdMYAIKp7Sxvz\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,\n    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,\n    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/a../Library/Mobile Documents/com~apple~CloudDocs/FAF/Semestrul 2/SDA/IW/swifttender&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"2dff6969-e8cb-4c56-9b0a-822e90d745fc\" name=\"Changes\" comment=\"\" />\n      <created>1778600609907</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1778600609907</updated>\n      <workItem from=\"1778600611365\" duration=\"2150000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"feat: add mongoose.c HTTP server skeleton\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1778602036653</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1778602036653</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"feat(dsa): implement binary search for legal threshold lookup\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1778609951049</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1778609951049</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"feat(dsa): implement N-ary tree for quarterly report generation\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1778610211823</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1778610211823</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"4\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"feat: add mongoose.c HTTP server skeleton\" />\n    <MESSAGE value=\"feat(dsa): implement binary search for legal threshold lookup\" />\n    <MESSAGE value=\"feat(dsa): implement N-ary tree for quarterly report generation\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"feat(dsa): implement N-ary tree for quarterly report generation\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision dce2a38e284adfdd983303d8bee641efc4547940)
++++ b/.idea/workspace.xml	(date 1778612180696)
+@@ -15,10 +15,8 @@
+     </configurations>
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="2dff6969-e8cb-4c56-9b0a-822e90d745fc" name="Changes" comment="feat(dsa): implement N-ary tree for quarterly report generation">
+-      <change beforePath="$PROJECT_DIR$/backend/handlers/auth_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/auth_handler.c" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/backend/handlers/auth_handler.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/auth_handler.h" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/backend/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.c" afterDir="false" />
++    <list default="true" id="2dff6969-e8cb-4c56-9b0a-822e90d745fc" name="Changes" comment="feat(api): offer endpoints and min-heap ranking">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -103,7 +101,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1778610211823</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="feat(api): offer endpoints and min-heap ranking">
++      <option name="closed" value="true" />
++      <created>1778611374933</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1778611374933</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -124,6 +130,7 @@
+     <MESSAGE value="feat: add mongoose.c HTTP server skeleton" />
+     <MESSAGE value="feat(dsa): implement binary search for legal threshold lookup" />
+     <MESSAGE value="feat(dsa): implement N-ary tree for quarterly report generation" />
+-    <option name="LAST_COMMIT_MESSAGE" value="feat(dsa): implement N-ary tree for quarterly report generation" />
++    <MESSAGE value="feat(api): offer endpoints and min-heap ranking" />
++    <option name="LAST_COMMIT_MESSAGE" value="feat(api): offer endpoints and min-heap ranking" />
+   </component>
+ </project>
+\ No newline at end of file

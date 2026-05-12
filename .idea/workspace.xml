@@ -15,7 +15,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dff6969-e8cb-4c56-9b0a-822e90d745fc" name="Changes" comment="feat(dsa): implement N-ary tree for quarterly report generation" />
+    <list default="true" id="2dff6969-e8cb-4c56-9b0a-822e90d745fc" name="Changes" comment="feat(dsa): implement N-ary tree for quarterly report generation">
+      <change beforePath="$PROJECT_DIR$/backend/handlers/auth_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/auth_handler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/handlers/auth_handler.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/auth_handler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.c" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,12 +37,12 @@
     &quot;assignee&quot;: &quot;v6mp1r3&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/v6mp1r3/swifttender.git",
-    "accountId": "786d2a2c-4730-4054-966d-3adf95daa9b4"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/v6mp1r3/swifttender.git&quot;,
+    &quot;accountId&quot;: &quot;3b1f847e-a173-4168-8bf8-604048206225&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -47,27 +51,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/a../Library/Mobile Documents/com~apple~CloudDocs/FAF/Semestrul 2/SDA/IW/swifttender",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/a../Library/Mobile Documents/com~apple~CloudDocs/FAF/Semestrul 2/SDA/IW/swifttender&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2dff6969-e8cb-4c56-9b0a-822e90d745fc" name="Changes" comment="" />
