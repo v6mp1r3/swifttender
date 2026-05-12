@@ -1,0 +1,76 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"BackendCodeEditorMiscSettings\">\n    <option name=\"/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue\" value=\"true\" type=\"bool\" />\n  </component>\n  <component name=\"CMakeProjectFlavorService\">\n    <option name=\"flavorId\" value=\"CMakePlainProjectFlavor\" />\n  </component>\n  <component name=\"CMakeSettings\">\n    <configurations>\n      <configuration PROFILE_NAME=\"Debug\" ENABLED=\"true\" CONFIG_NAME=\"Debug\" />\n    </configurations>\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"2dff6969-e8cb-4c56-9b0a-822e90d745fc\" name=\"Changes\" comment=\"feat: add mongoose.c HTTP server skeleton\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ClangdSettings\">\n    <option name=\"formatViaClangd\" value=\"false\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;v6mp1r3&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/v6mp1r3/swifttender.git&quot;,\n    &quot;accountId&quot;: &quot;3b1f847e-a173-4168-8bf8-604048206225&quot;\n  }\n}</component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 0\n}</component>\n  <component name=\"ProjectId\" id=\"3Dd8VQmGZzOffOWdMYAIKp7Sxvz\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\n    \"RunOnceActivity.RadMigrateCodeStyle\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252\": \"true\",\n    \"RunOnceActivity.cidr.known.project.marker\": \"true\",\n    \"RunOnceActivity.git.unshallow\": \"true\",\n    \"RunOnceActivity.readMode.enableVisualFormatting\": \"true\",\n    \"cf.first.check.clang-format\": \"false\",\n    \"cidr.known.project.marker\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"last_opened_file_path\": \"/Users/a../Library/Mobile Documents/com~apple~CloudDocs/FAF/Semestrul 2/SDA/IW/swifttender\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"2dff6969-e8cb-4c56-9b0a-822e90d745fc\" name=\"Changes\" comment=\"\" />\n      <created>1778600609907</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1778600609907</updated>\n      <workItem from=\"1778600611365\" duration=\"2150000\" />\n      <workItem from=\"1778608441237\" duration=\"300000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"feat: add mongoose.c HTTP server skeleton\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1778602036653</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1778602036653</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"2\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"feat: add mongoose.c HTTP server skeleton\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"feat: add mongoose.c HTTP server skeleton\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision e61432afe8333482581847521e2df6e31366ab6b)
++++ b/.idea/workspace.xml	(date 1778608938876)
+@@ -15,7 +15,9 @@
+     </configurations>
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="2dff6969-e8cb-4c56-9b0a-822e90d745fc" name="Changes" comment="feat: add mongoose.c HTTP server skeleton" />
++    <list default="true" id="2dff6969-e8cb-4c56-9b0a-822e90d745fc" name="Changes" comment="feat(dsa): implement hash table">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -33,12 +35,12 @@
+     &quot;assignee&quot;: &quot;v6mp1r3&quot;
+   }
+ }</component>
+-  <component name="GithubPullRequestsUISettings">{
+-  &quot;selectedUrlAndAccountId&quot;: {
+-    &quot;url&quot;: &quot;https://github.com/v6mp1r3/swifttender.git&quot;,
+-    &quot;accountId&quot;: &quot;3b1f847e-a173-4168-8bf8-604048206225&quot;
+-  }
+-}</component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/v6mp1r3/swifttender.git",
++    "accountId": "786d2a2c-4730-4054-966d-3adf95daa9b4"
++  }
++}]]></component>
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 0
+ }</component>
+@@ -76,7 +78,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1778600609907</updated>
+       <workItem from="1778600611365" duration="2150000" />
+-      <workItem from="1778608441237" duration="300000" />
++      <workItem from="1778608441237" duration="496000" />
+     </task>
+     <task id="LOCAL-00001" summary="feat: add mongoose.c HTTP server skeleton">
+       <option name="closed" value="true" />
+@@ -86,7 +88,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1778602036653</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="feat(dsa): implement hash table">
++      <option name="closed" value="true" />
++      <created>1778608791366</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1778608791366</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -105,6 +115,7 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="feat: add mongoose.c HTTP server skeleton" />
+-    <option name="LAST_COMMIT_MESSAGE" value="feat: add mongoose.c HTTP server skeleton" />
++    <MESSAGE value="feat(dsa): implement hash table" />
++    <option name="LAST_COMMIT_MESSAGE" value="feat(dsa): implement hash table" />
+   </component>
+ </project>
+\ No newline at end of file
