@@ -19,6 +19,7 @@
 #include "router.h"
 #include "storage/file_io.h"
 #include "utils/auth.h"
+#include "handlers/tender_handler.h"
 
 /* ── Configuration ────────────────────────────────────────────── */
 #define SERVER_PORT   "http://0.0.0.0:8000"
@@ -90,6 +91,9 @@ int main(void) {
 
     /* Initialise session hash table (DSA: hash_table.c) */
     auth_init();
+
+    /* Load tender catalogue into doubly linked list (DSA: linked_list.c) */
+    tender_list_init(DATA_DIR);
 
     /* Initialise mongoose event manager */
     struct mg_mgr mgr;
