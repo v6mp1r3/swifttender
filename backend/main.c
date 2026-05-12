@@ -20,6 +20,7 @@
 #include "storage/file_io.h"
 #include "utils/auth.h"
 #include "handlers/tender_handler.h"
+#include "utils/notify.h"
 
 /* ── Configuration ────────────────────────────────────────────── */
 #define SERVER_PORT   "http://0.0.0.0:8000"
@@ -95,6 +96,9 @@ int main(void) {
     /* Load tender catalogue into doubly linked list (DSA: linked_list.c) */
     tender_list_init(DATA_DIR);
 
+    /* Initialise per-user notification queues (DSA: queue.c) */
+    notify_init();
+
     /* Initialise mongoose event manager */
     struct mg_mgr mgr;
     mg_mgr_init(&mgr);
@@ -121,6 +125,7 @@ int main(void) {
 
     printf("\n[INFO]  Shutting down...\n");
     auth_cleanup();
+    notify_cleanup();
     mg_mgr_free(&mgr);
 
     return EXIT_SUCCESS;

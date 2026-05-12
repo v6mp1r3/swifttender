@@ -28,7 +28,8 @@ SRCS =  main.c \
         utils/json.c \
         utils/auth.c \
         utils/threshold.c \
-        utils/ranking.c
+        utils/ranking.c \
+        utils/notify.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -50,3 +51,5 @@ clean:
 
 valgrind: all
 	valgrind --leak-check=full --track-origins=yes ./$(TARGET)
+
+# Note: notify.c and ranking.c added in feat(api) commits
