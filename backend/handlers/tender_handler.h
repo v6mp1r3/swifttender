@@ -2,7 +2,7 @@
 #define TENDER_HANDLER_H
 
 #include "mongoose.h"
-#include "../dsa/linked_list.h"
+#include "dsa/linked_list.h"
 
 /* Global tender catalogue -- doubly linked list, init at startup */
 extern LinkedList *g_tenders;

@@ -3,12 +3,12 @@
  */
 
 #include "auth_handler.h"
-#include "../router.h"
-#include "../utils/auth.h"
-#include "../utils/json.h"
-#include "../storage/file_io.h"
-#include "../storage/upload.h"
-#include "../models/user.h"
+#include "router.h"
+#include "utils/auth.h"
+#include "utils/json.h"
+#include "storage/file_io.h"
+#include "storage/upload.h"
+#include "models/user.h"
 
 #include <stdio.h>
 #include <string.h>

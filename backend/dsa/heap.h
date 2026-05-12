@@ -2,7 +2,7 @@
 #define HEAP_H
 
 #include <stddef.h>
-#include "../models/offer.h"
+#include "models/offer.h"
 
 /*
  * ==================================================================

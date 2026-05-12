@@ -2,8 +2,8 @@
 #define NOTIFY_H
 
 #include <stdint.h>
-#include "../models/notification.h"
-#include "../dsa/queue.h"
+#include "models/notification.h"
+#include "dsa/queue.h"
 
 /*
  * notify.h -- per-user notification queue management.

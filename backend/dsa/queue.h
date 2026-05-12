@@ -2,7 +2,7 @@
 #define QUEUE_H
 
 #include <stddef.h>
-#include "../models/notification.h"
+#include "models/notification.h"
 
 /*
  * ==================================================================

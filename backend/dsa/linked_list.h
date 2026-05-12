@@ -2,7 +2,7 @@
 #define LINKED_LIST_H
 
 #include <stddef.h>
-#include "../models/tender.h"
+#include "models/tender.h"
 
 /*
  * ==================================================================

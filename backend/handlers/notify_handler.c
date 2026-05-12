@@ -6,11 +6,11 @@
  */
 
 #include "notify_handler.h"
-#include "../router.h"
-#include "../utils/auth.h"
-#include "../utils/json.h"
-#include "../utils/notify.h"
-#include "../models/notification.h"
+#include "router.h"
+#include "utils/auth.h"
+#include "utils/json.h"
+#include "utils/notify.h"
+#include "models/notification.h"
 
 #include <stdio.h>
 #include <string.h>

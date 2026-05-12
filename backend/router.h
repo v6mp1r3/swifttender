@@ -24,7 +24,7 @@ typedef struct {
     HandlerFn   handler;
 } Route;
 
-/* Main dispatch function - called from main.c for every /api/* request */
+/* Main dispatch function - called from main.c for every /api/... request */
 void router_dispatch(struct mg_connection *c, struct mg_http_message *hm);
 
 /* Send a JSON response with standard CORS headers */

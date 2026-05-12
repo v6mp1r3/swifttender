@@ -1,7 +1,7 @@
 #ifndef UPLOAD_H
 #define UPLOAD_H
 
-#include "../mongoose.h"
+#include "mongoose.h"
 
 /*
  * upload.h -- multipart file upload handling.

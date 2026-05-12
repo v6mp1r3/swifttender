@@ -2,7 +2,7 @@
 #define BINARY_SEARCH_H
 
 #include <stddef.h>
-#include "../utils/threshold.h"
+#include "utils/threshold.h"
 
 /*
  * ==================================================================

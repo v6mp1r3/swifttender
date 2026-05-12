@@ -2,7 +2,7 @@
  * SwiftTender — main.c
  *
  * Entry point. Sets up the mongoose embedded HTTP server, serves the
- * React frontend as static files, and dispatches all /api/* requests
+ * React frontend as static files, and dispatches all /api/... requests
  * to the router.
  *
  * Build:  make

@@ -10,15 +10,15 @@
 
 #include "offer_handler.h"
 #include "tender_handler.h"
-#include "../router.h"
-#include "../utils/auth.h"
-#include "../utils/json.h"
-#include "../utils/ranking.h"
-#include "../dsa/heap.h"
-#include "../dsa/linked_list.h"
-#include "../storage/file_io.h"
-#include "../models/offer.h"
-#include "../models/tender.h"
+#include "router.h"
+#include "utils/auth.h"
+#include "utils/json.h"
+#include "utils/ranking.h"
+#include "dsa/heap.h"
+#include "dsa/linked_list.h"
+#include "storage/file_io.h"
+#include "models/offer.h"
+#include "models/tender.h"
 
 #include <stdio.h>
 #include <stdlib.h>

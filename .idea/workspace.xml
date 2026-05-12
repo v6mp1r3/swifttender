@@ -16,9 +16,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dff6969-e8cb-4c56-9b0a-822e90d745fc" name="Changes" comment="feat(api): offer endpoints and min-heap ranking">
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Notification.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Notification.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Contract.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Contract.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/dsa/binary_search.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dsa/binary_search.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/dsa/heap.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dsa/heap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/dsa/linked_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dsa/linked_list.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/dsa/queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dsa/queue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/handlers/auth_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/auth_handler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/handlers/contract_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/contract_handler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/handlers/notify_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/notify_handler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/handlers/offer_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/offer_handler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/handlers/report_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/report_handler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/handlers/tender_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/tender_handler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/handlers/tender_handler.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/tender_handler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/router.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/router.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/storage/file_io.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/storage/file_io.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/storage/upload.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/storage/upload.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/auth.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/auth.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/auth.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/auth.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/notify.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/notify.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/notify.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/notify.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/ranking.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/ranking.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/threshold.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/threshold.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778612433276</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat(ui): offers ranking table and winner selection">
+      <option name="closed" value="true" />
+      <created>1778612504048</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1778612504048</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +160,7 @@
     <MESSAGE value="feat(dsa): implement binary search for legal threshold lookup" />
     <MESSAGE value="feat(dsa): implement N-ary tree for quarterly report generation" />
     <MESSAGE value="feat(api): offer endpoints and min-heap ranking" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(api): offer endpoints and min-heap ranking" />
+    <MESSAGE value="feat(ui): offers ranking table and winner selection" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ui): offers ranking table and winner selection" />
   </component>
 </project>

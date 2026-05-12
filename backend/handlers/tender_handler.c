@@ -9,14 +9,14 @@
  */
 
 #include "tender_handler.h"
-#include "../router.h"
-#include "../utils/auth.h"
-#include "../utils/json.h"
-#include "../utils/threshold.h"
-#include "../dsa/linked_list.h"
-#include "../dsa/binary_search.h"
-#include "../storage/file_io.h"
-#include "../models/tender.h"
+#include "router.h"
+#include "utils/auth.h"
+#include "utils/json.h"
+#include "utils/threshold.h"
+#include "dsa/linked_list.h"
+#include "dsa/binary_search.h"
+#include "storage/file_io.h"
+#include "models/tender.h"
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -7,7 +7,7 @@
  */
 
 #include "notify.h"
-#include "../storage/file_io.h"
+#include "storage/file_io.h"
 
 #include <stdlib.h>
 #include <string.h>

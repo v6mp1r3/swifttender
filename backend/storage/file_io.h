@@ -2,10 +2,10 @@
 #define FILE_IO_H
 
 #include <stddef.h>
-#include "../models/user.h"
-#include "../models/tender.h"
-#include "../models/offer.h"
-#include "../models/notification.h"
+#include "models/user.h"
+#include "models/tender.h"
+#include "models/offer.h"
+#include "models/notification.h"
 
 /*
  * ==================================================================

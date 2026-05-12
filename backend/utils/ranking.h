@@ -1,8 +1,8 @@
 #ifndef RANKING_H
 #define RANKING_H
 
-#include "../models/offer.h"
-#include "../dsa/heap.h"
+#include "models/offer.h"
+#include "dsa/heap.h"
 
 /*
  * ranking.h -- weighted score computation and heap-based offer ranking.

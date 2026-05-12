@@ -11,16 +11,16 @@
 
 #include "contract_handler.h"
 #include "tender_handler.h"
-#include "../router.h"
-#include "../utils/auth.h"
-#include "../utils/json.h"
-#include "../utils/notify.h"
-#include "../dsa/tree.h"
-#include "../dsa/linked_list.h"
-#include "../storage/file_io.h"
-#include "../storage/upload.h"
-#include "../models/tender.h"
-#include "../models/offer.h"
+#include "router.h"
+#include "utils/auth.h"
+#include "utils/json.h"
+#include "utils/notify.h"
+#include "dsa/tree.h"
+#include "dsa/linked_list.h"
+#include "storage/file_io.h"
+#include "storage/upload.h"
+#include "models/tender.h"
+#include "models/offer.h"
 
 #include <stdio.h>
 #include <stdlib.h>

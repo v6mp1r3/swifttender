@@ -7,7 +7,7 @@
  */
 
 #include "auth.h"
-#include "../router.h"
+#include "router.h"
 
 #include <stdio.h>
 #include <stdlib.h>
