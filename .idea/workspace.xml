@@ -15,10 +15,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dff6969-e8cb-4c56-9b0a-822e90d745fc" name="Changes" comment="feat(dsa): implement N-ary tree for quarterly report generation">
-      <change beforePath="$PROJECT_DIR$/backend/handlers/auth_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/auth_handler.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/handlers/auth_handler.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/auth_handler.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.c" afterDir="false" />
+    <list default="true" id="2dff6969-e8cb-4c56-9b0a-822e90d745fc" name="Changes" comment="feat(api): offer endpoints and min-heap ranking">
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Offers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Offers.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778610211823</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat(api): offer endpoints and min-heap ranking">
+      <option name="closed" value="true" />
+      <created>1778612433276</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1778612433276</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +130,7 @@
     <MESSAGE value="feat: add mongoose.c HTTP server skeleton" />
     <MESSAGE value="feat(dsa): implement binary search for legal threshold lookup" />
     <MESSAGE value="feat(dsa): implement N-ary tree for quarterly report generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(dsa): implement N-ary tree for quarterly report generation" />
+    <MESSAGE value="feat(api): offer endpoints and min-heap ranking" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(api): offer endpoints and min-heap ranking" />
   </component>
 </project>
