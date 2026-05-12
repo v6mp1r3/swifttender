@@ -18,6 +18,7 @@
 #include "mongoose.h"
 #include "router.h"
 #include "storage/file_io.h"
+#include "utils/auth.h"
 
 /* ── Configuration ────────────────────────────────────────────── */
 #define SERVER_PORT   "http://0.0.0.0:8000"
@@ -87,6 +88,9 @@ int main(void) {
         return EXIT_FAILURE;
     }
 
+    /* Initialise session hash table (DSA: hash_table.c) */
+    auth_init();
+
     /* Initialise mongoose event manager */
     struct mg_mgr mgr;
     mg_mgr_init(&mgr);
@@ -112,6 +116,7 @@ int main(void) {
     }
 
     printf("\n[INFO]  Shutting down...\n");
+    auth_cleanup();
     mg_mgr_free(&mgr);
 
     return EXIT_SUCCESS;

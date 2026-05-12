@@ -3,6 +3,9 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+  </component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
   </component>
@@ -12,7 +15,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dff6969-e8cb-4c56-9b0a-822e90d745fc" name="Changes" comment="feat(dsa): implement N-ary tree for quarterly report generation" />
+    <list default="true" id="2dff6969-e8cb-4c56-9b0a-822e90d745fc" name="Changes" comment="feat(dsa): implement N-ary tree for quarterly report generation">
+      <change beforePath="$PROJECT_DIR$/backend/handlers/auth_handler.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/auth_handler.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/handlers/auth_handler.h" beforeDir="false" afterPath="$PROJECT_DIR$/backend/handlers/auth_handler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.c" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
