@@ -16,7 +16,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dff6969-e8cb-4c56-9b0a-822e90d745fc" name="Changes" comment="feat(api): offer endpoints and min-heap ranking">
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Offers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Offers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Notification.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Notification.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Contract.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Contract.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
