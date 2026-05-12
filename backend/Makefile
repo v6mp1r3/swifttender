@@ -27,7 +27,8 @@ SRCS =  main.c \
         storage/upload.c \
         utils/json.c \
         utils/auth.c \
-        utils/threshold.c
+        utils/threshold.c \
+        utils/ranking.c
 
 OBJS = $(SRCS:.c=.o)
 
