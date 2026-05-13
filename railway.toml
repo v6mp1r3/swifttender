@@ -1,0 +1,8 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+healthcheckPath = "/api/tenders"
+healthcheckTimeout = 60
+restartPolicyType = "on_failure"
