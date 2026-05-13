@@ -1,12 +1,12 @@
 /*
  * SwiftTender -- main.c
- * Entry point. mongoose HTTP server and event loop.
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>
 #include <string.h>
+#include <sys/stat.h>
 
 #include "mongoose.h"
 #include "router.h"
@@ -16,13 +16,11 @@
 #include "utils/notify.h"
 
 #define DEFAULT_PORT "8000"
-#define STATIC_DIR   "../frontend/dist"
 #define DATA_DIR     "./data"
 
-/* File-scope so event_handler() can access it */
-static const char *s_static_dir = "../frontend/dist";
-
 static volatile int s_running = 1;
+static const char  *s_static_dir = "../frontend/dist";  /* overridden by STATIC_DIR env */
+
 static void signal_handler(int sig) { (void)sig; s_running = 0; }
 
 static void event_handler(struct mg_connection *c, int ev, void *ev_data) {
@@ -30,8 +28,7 @@ static void event_handler(struct mg_connection *c, int ev, void *ev_data) {
     struct mg_http_message *hm = (struct mg_http_message *)ev_data;
 
     /* CORS preflight */
-    if (hm->method.len == 7 &&
-        memcmp(hm->method.buf, "OPTIONS", 7) == 0) {
+    if (hm->method.len == 7 && memcmp(hm->method.buf, "OPTIONS", 7) == 0) {
         mg_http_reply(c, 204,
             "Access-Control-Allow-Origin: *\r\n"
             "Access-Control-Allow-Methods: GET,POST,PATCH,DELETE,OPTIONS\r\n"
@@ -40,20 +37,38 @@ static void event_handler(struct mg_connection *c, int ev, void *ev_data) {
         return;
     }
 
-    /* Route /api/ prefix to our router */
+    /* API routes */
     if (hm->uri.len >= 5 && memcmp(hm->uri.buf, "/api/", 5) == 0) {
         router_dispatch(c, hm);
         return;
     }
 
-    /* Serve React SPA static files */
+    /*
+     * Serve React SPA static files.
+     * For any path that isn't a real file (no extension), serve index.html
+     * so React Router can handle client-side navigation.
+     */
     struct mg_http_serve_opts opts;
     memset(&opts, 0, sizeof(opts));
     opts.root_dir = s_static_dir;
     opts.extra_headers =
         "Access-Control-Allow-Origin: *\r\n"
         "Cache-Control: no-cache\r\n";
-    mg_http_serve_dir(c, hm, &opts);
+
+    /* Check if URI has a file extension (js, css, png, etc.) */
+    int has_extension = 0;
+    for (int i = (int)hm->uri.len - 1; i >= 0 && hm->uri.buf[i] != '/'; i--) {
+        if (hm->uri.buf[i] == '.') { has_extension = 1; break; }
+    }
+
+    if (!has_extension) {
+        /* SPA fallback: serve index.html for all navigation routes */
+        char index_path[512];
+        snprintf(index_path, sizeof(index_path), "%s/index.html", s_static_dir);
+        mg_http_serve_file(c, hm, index_path, &opts);
+    } else {
+        mg_http_serve_dir(c, hm, &opts);
+    }
 }
 
 int main(void) {
@@ -64,6 +79,14 @@ int main(void) {
     printf("  SwiftTender -- Procurement Platform\n");
     printf("=========================================\n");
 
+    const char *env_static = getenv("STATIC_DIR");
+    if (env_static) s_static_dir = env_static;
+
+    const char *port_env = getenv("PORT");
+    char server_url[64];
+    snprintf(server_url, sizeof(server_url), "http://0.0.0.0:%s",
+             port_env ? port_env : DEFAULT_PORT);
+
     if (file_io_init(DATA_DIR) != 0) {
         fprintf(stderr, "[ERROR] Failed to init data directory\n");
         return EXIT_FAILURE;
@@ -72,16 +95,6 @@ int main(void) {
     auth_init();
     tender_list_init(DATA_DIR);
     notify_init();
-
-    /* Read config from environment variables (for cloud deployment) */
-    const char *env_static = getenv("STATIC_DIR");
-    if (env_static) s_static_dir = env_static;
-    
-
-    const char *port_env = getenv("PORT");
-    char server_url[64];
-    snprintf(server_url, sizeof(server_url), "http://0.0.0.0:%s",
-             port_env ? port_env : DEFAULT_PORT);
 
     struct mg_mgr mgr;
     mg_mgr_init(&mgr);

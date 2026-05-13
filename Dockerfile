@@ -27,6 +27,6 @@ RUN mkdir -p data/uploads data/contracts data/reports data/www
 EXPOSE 8000
 
 # Update STATIC_DIR to serve the built frontend
-ENV STATIC_DIR=./data/www
+ENV STATIC_DIR=/app/backend/data/www
 
 CMD ["./swifttender"]
