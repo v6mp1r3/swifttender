@@ -1,5 +1,5 @@
 CC      = gcc
-CFLAGS  = -I. -std=c11 -Wall -Wextra -Wpedantic -g
+CFLAGS  = -I. -std=c11 -Wall -Wextra -Wpedantic -g -D_GNU_SOURCE
 LDFLAGS = -lm
 
 TARGET  = swifttender
