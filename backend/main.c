@@ -15,11 +15,9 @@
 #include "handlers/tender_handler.h"
 #include "utils/notify.h"
 
-#define DEFAULT_PORT       "8000"
-#define DEFAULT_STATIC_DIR "../frontend/dist"
-#define DATA_DIR           "./data"
-
-static const char *static_dir = NULL;
+#define DEFAULT_PORT "8000"
+#define STATIC_DIR   "../frontend/dist"
+#define DATA_DIR     "./data"
 
 static volatile int s_running = 1;
 static void signal_handler(int sig) { (void)sig; s_running = 0; }
@@ -73,8 +71,8 @@ int main(void) {
     notify_init();
 
     /* Read config from environment variables (for cloud deployment) */
-    static_dir = getenv("STATIC_DIR");
-    if (!static_dir) static_dir = DEFAULT_STATIC_DIR;  /* local dev fallback */
+    const char *static_dir = getenv("STATIC_DIR");
+    if (!static_dir) static_dir = "../frontend/dist";  /* local dev fallback */
 
     const char *port_env = getenv("PORT");
     char server_url[64];
@@ -87,7 +85,7 @@ int main(void) {
     struct mg_connection *conn =
         mg_http_listen(&mgr, server_url, event_handler, NULL);
     if (!conn) {
-        fprintf(stderr, "[ERROR] Cannot listen on %s\n", server_url);
+        fprintf(stderr, "[ERROR] Cannot listen on %s\n", SERVER_PORT);
         mg_mgr_free(&mgr);
         return EXIT_FAILURE;
     }
