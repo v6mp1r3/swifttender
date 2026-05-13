@@ -19,6 +19,9 @@
 #define STATIC_DIR   "../frontend/dist"
 #define DATA_DIR     "./data"
 
+/* File-scope so event_handler() can access it */
+static const char *s_static_dir = "../frontend/dist";
+
 static volatile int s_running = 1;
 static void signal_handler(int sig) { (void)sig; s_running = 0; }
 
@@ -46,7 +49,7 @@ static void event_handler(struct mg_connection *c, int ev, void *ev_data) {
     /* Serve React SPA static files */
     struct mg_http_serve_opts opts;
     memset(&opts, 0, sizeof(opts));
-    opts.root_dir = static_dir;
+    opts.root_dir = s_static_dir;
     opts.extra_headers =
         "Access-Control-Allow-Origin: *\r\n"
         "Cache-Control: no-cache\r\n";
@@ -71,8 +74,9 @@ int main(void) {
     notify_init();
 
     /* Read config from environment variables (for cloud deployment) */
-    const char *static_dir = getenv("STATIC_DIR");
-    if (!static_dir) static_dir = "../frontend/dist";  /* local dev fallback */
+    const char *env_static = getenv("STATIC_DIR");
+    if (env_static) s_static_dir = env_static;
+    
 
     const char *port_env = getenv("PORT");
     char server_url[64];
@@ -85,13 +89,13 @@ int main(void) {
     struct mg_connection *conn =
         mg_http_listen(&mgr, server_url, event_handler, NULL);
     if (!conn) {
-        fprintf(stderr, "[ERROR] Cannot listen on %s\n", SERVER_PORT);
+        fprintf(stderr, "[ERROR] Cannot listen on %s\n", server_url);
         mg_mgr_free(&mgr);
         return EXIT_FAILURE;
     }
 
     printf("[INFO]  Listening on   %s\n", server_url);
-    printf("[INFO]  Serving SPA:   %s\n", static_dir);
+    printf("[INFO]  Serving SPA:   %s\n", s_static_dir);
     printf("[INFO]  Data dir:      %s\n", DATA_DIR);
     printf("[INFO]  Press Ctrl+C to stop\n\n");
 
