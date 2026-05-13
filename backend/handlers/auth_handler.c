@@ -118,7 +118,7 @@ void auth_register_handler(struct mg_connection *c,
     fio_audit_append(u.id, "REGISTER", u.id, u.email);
 
     /* Build response */
-    char user_json[512];
+    char user_json[2048];
     user_to_json(&u, user_json, sizeof(user_json));
 
     router_send_json(c, 201,
@@ -168,7 +168,7 @@ void auth_login_handler(struct mg_connection *c,
 
     fio_audit_append(u.id, "LOGIN", u.id, u.email);
 
-    char user_json[512];
+    char user_json[2048];
     user_to_json(&u, user_json, sizeof(user_json));
 
     router_send_json(c, 200,
@@ -193,7 +193,7 @@ void auth_me_handler(struct mg_connection *c,
         return;
     }
 
-    char user_json[512];
+    char user_json[2048];
     user_to_json(&u, user_json, sizeof(user_json));
     router_send_json(c, 200, "{\"user\":%s}", user_json);
 }

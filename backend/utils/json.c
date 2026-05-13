@@ -1,5 +1,9 @@
 /*
  * json.c -- JSON builder and field extractor helpers.
+ *
+ * Uses current mongoose JSON API:
+ *   mg_json_get_str()  returns char* (heap-allocated, caller must free)
+ *   mg_json_get_num()  returns bool, writes into double*
  */
 
 #include "json.h"
@@ -11,11 +15,12 @@
 
 int json_get_str(struct mg_str body, const char *path,
                  char *out, size_t max) {
-    struct mg_str val = mg_json_get_str(body, path);
-    if (val.buf == NULL || val.len == 0) return -1;
-    if (val.len >= max) return -1;
-    memcpy(out, val.buf, val.len);
-    out[val.len] = '\0';
+    /* mg_json_get_str allocates a null-terminated string; caller frees */
+    char *val = mg_json_get_str(body, path);
+    if (!val) return -1;
+    strncpy(out, val, max - 1);
+    out[max - 1] = '\0';
+    free(val);
     return 0;
 }
 
@@ -33,16 +38,23 @@ int json_get_float(struct mg_str body, const char *path, float *out) {
     return 0;
 }
 
-/* ── Building helpers ────────────────────────────────────────────── */
+/* ── Building helpers ─────────────────────────────────────────── */
 
 void json_escape(const char *in, char *out, size_t max) {
     size_t j = 0;
-    for (size_t i = 0; in[i] && j + 2 < max; i++) {
-        if (in[i] == '"' || in[i] == '\\') {
-            if (j + 3 >= max) break;
-            out[j++] = '\\';
+    for (size_t i = 0; in[i] && j + 4 < max; i++) {
+        unsigned char c = (unsigned char)in[i];
+        if (c == '"' || c == '\\') {
+            out[j++] = '\\'; out[j++] = (char)c;
+        } else if (c == '\n') {
+            out[j++] = '\\'; out[j++] = 'n';
+        } else if (c == '\r') {
+            out[j++] = '\\'; out[j++] = 'r';
+        } else if (c == '\t') {
+            out[j++] = '\\'; out[j++] = 't';
+        } else {
+            out[j++] = (char)c;
         }
-        out[j++] = in[i];
     }
     out[j] = '\0';
 }

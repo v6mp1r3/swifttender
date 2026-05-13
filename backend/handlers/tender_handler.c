@@ -59,13 +59,15 @@ void tender_list_init(const char *data_dir) {
     }
 
     /* Load saved tenders from file into the list.
-     * We iterate in reverse so prepend produces chronological order
-     * (ll_prepend adds at head, so last-loaded ends up first). */
-    Tender buf[FIO_MAX_TENDERS];
+     * FIX: use heap allocation -- Tender buf[FIO_MAX_TENDERS] on stack
+     * = ~7 MB which overflows macOS default 8 MB stack.            */
+    Tender *buf = (Tender *)malloc(sizeof(Tender) * FIO_MAX_TENDERS);
+    if (!buf) { fprintf(stderr, "[tender] malloc failed\n"); return; }
     size_t n = fio_tender_load_all(buf, FIO_MAX_TENDERS);
     for (int i = (int)n - 1; i >= 0; i--) {
         ll_prepend(g_tenders, &buf[i]);
     }
+    free(buf);
     printf("[tender] Loaded %zu tenders into linked list\n", n);
 }
 
@@ -86,9 +88,10 @@ void tender_list_handler(struct mg_connection *c,
     mg_http_get_var(&hm->query, "category", category_filter, sizeof(category_filter));
 
     /* Build JSON array by traversing the linked list */
-    char   body[65536];
+    static char body[131072];
     int    n   = 0;
     size_t cnt = 0;
+    memset(body, 0, sizeof(body));
 
     n += snprintf(body + n, sizeof(body) - (size_t)n, "{\"tenders\":[");
 
@@ -116,7 +119,7 @@ void tender_list_handler(struct mg_connection *c,
             }
         }
 
-        char tj[1024];
+        char tj[8192];
         tender_to_json(t, tj, sizeof(tj));
         n += snprintf(body + n, sizeof(body) - (size_t)n, "%s,", tj);
         cnt++;
@@ -207,7 +210,7 @@ void tender_create_handler(struct mg_connection *c,
 
     fio_audit_append(user_id, "CREATE_TENDER", t.id, t.title);
 
-    char tj[1024];
+    char tj[8192];
     tender_to_json(&t, tj, sizeof(tj));
     router_send_json(c, 201, "{\"tender\":%s}", tj);
 }
@@ -226,7 +229,7 @@ void tender_get_handler(struct mg_connection *c,
     TenderNode *node = ll_find_id(g_tenders, (uint32_t)id);
     if (!node) { router_send_error(c, 404, "Tender not found"); return; }
 
-    char tj[1024];
+    char tj[8192];
     tender_to_json(&node->data, tj, sizeof(tj));
     router_send_json(c, 200, "{\"tender\":%s}", tj);
 }
@@ -279,7 +282,7 @@ void tender_update_handler(struct mg_connection *c,
     fio_tender_update(t);
     fio_audit_append(user_id, "UPDATE_TENDER", t->id, t->title);
 
-    char tj[1024];
+    char tj[8192];
     tender_to_json(t, tj, sizeof(tj));
     router_send_json(c, 200, "{\"tender\":%s}", tj);
 }

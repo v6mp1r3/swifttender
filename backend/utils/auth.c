@@ -120,23 +120,21 @@ void auth_token_revoke(const char *token) {
 /* ── HTTP helpers ───────────────────────────────────────────────── */
 
 int auth_get_bearer(struct mg_http_message *hm, char *out, size_t max) {
-    /* Look for "Authorization: Bearer <token>" header */
-    struct mg_str auth_header = mg_http_get_header_var(
-        *hm, mg_str("Authorization"), mg_str("Bearer"));
+    /*
+     * mg_http_get_header returns struct mg_str* (pointer) in current mongoose.
+     * We manually strip the "Bearer " prefix (7 chars).
+     */
+    struct mg_str *h = mg_http_get_header(hm, "Authorization");
+    if (!h || h->len <= 7) return -1;
 
-    /* Fallback: check the full Authorization header */
-    if (auth_header.len == 0) {
-        struct mg_str h = mg_http_get_header(hm, "Authorization");
-        if (h.len == 0) return -1;
-        /* Skip "Bearer " prefix (7 chars) */
-        if (h.len <= 7) return -1;
-        auth_header.buf = h.buf + 7;
-        auth_header.len = h.len - 7;
-    }
+    /* Verify it starts with "Bearer " */
+    if (strncmp(h->buf, "Bearer ", 7) != 0) return -1;
 
-    if (auth_header.len == 0 || auth_header.len >= max) return -1;
-    memcpy(out, auth_header.buf, auth_header.len);
-    out[auth_header.len] = '\0';
+    size_t token_len = h->len - 7;
+    if (token_len == 0 || token_len >= max) return -1;
+
+    memcpy(out, h->buf + 7, token_len);
+    out[token_len] = '\0';
     return 0;
 }
 

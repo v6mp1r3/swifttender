@@ -10,6 +10,7 @@
 #include "ranking.h"
 #include <stdlib.h>
 #include <float.h>
+#include <limits.h>
 
 /* ----------------------------------------------------------------
  * ranking_score -- compute the weighted key for one offer.
